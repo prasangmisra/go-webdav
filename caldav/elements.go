@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"time"
 
-	"github.com/emersion/go-webdav/internal"
+	"github.com/prasangmisra/go-webdav/internal"
 )
 
 const namespace = "urn:ietf:params:xml:ns:caldav"
