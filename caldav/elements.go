@@ -138,7 +138,8 @@ type calendarDataReq struct {
 
 // https://tools.ietf.org/html/rfc4791#section-9.6.1
 type comp struct {
-	XMLName xml.Name `xml:"urn:ietf:params:xml:ns:caldav comp"`
+	//XMLName xml.Name `xml:"urn:ietf:params:xml:ns:caldav comp"`
+	XMLName xml.Name `xml:"comp"`
 	Name    string   `xml:"name,attr"`
 
 	Allprop *struct{} `xml:"allprop,omitempty"`

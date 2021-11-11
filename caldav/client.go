@@ -136,10 +136,7 @@ func encodeCalendarReq(c *CalendarCompRequest) (*internal.Prop, error) {
 	}
 
 	calDataReq := calendarDataReq{Comp: compReq}
-
-	getLastModReq := internal.NewRawXMLElement(internal.GetLastModifiedName, nil, nil)
-	getETagReq := internal.NewRawXMLElement(internal.GetETagName, nil, nil)
-	return internal.EncodeProp(&calDataReq, getLastModReq, getETagReq)
+	return internal.EncodeProp(&calDataReq)
 }
 
 func encodeCompFilter(filter *CompFilter) *compFilter {
