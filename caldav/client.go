@@ -263,10 +263,10 @@ func populateCalendarObject(co *CalendarObject, resp *http.Response) error {
 		co.ETag = etag
 	}
 	if lastModified := resp.Header.Get("Last-Modified"); lastModified != "" {
-		t, err := http.ParseTime(lastModified)
-		if err != nil {
-			return err
-		}
+		t, _ := http.ParseTime(lastModified)
+		// if err != nil {
+		// 	return err
+		// }
 		co.ModTime = t
 	}
 
